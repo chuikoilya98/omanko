@@ -11,14 +11,14 @@ acc_list = []
 checker = []
 rep = updater.job_queue
 added_acc = ''
-q = open("/Users/nikita/Desktop/project/acc_base.txt", "r")
+q = open("acc_base.txt", "r")
 for line in q :
        acc_list.append(line.strip())
 q.close() 
 def repeater(context: CallbackContext) :
         agent = WebAgent()
         checker = []    
-        check_base = open("/Users/nikita/Desktop/project/check_base.txt", "r")
+        check_base = open("check_base.txt", "r")
         for line in check_base :
                 checker.append(line.strip())
         check_base.close()
@@ -43,13 +43,13 @@ def repeater(context: CallbackContext) :
                         upload_caption = media.caption
                         print(upload_caption)
                         p = requests.get(upload_img)
-                        out = open("/Users/nikita/Desktop/project/1.jpg", "wb")
+                        out = open("1.jpg", "wb")
                         out.write(p.content)
                         out.close()
-                        context.bot.send_photo(chat_id='@omankoig', photo=open('/Users/nikita/Desktop/project/1.jpg', 'rb'))
+                        context.bot.send_photo(chat_id='@omankoig', photo=open('1.jpg', 'rb'))
                         context.bot.send_message(chat_id='@omankoig', text = upload_caption)
                         checker[i] = media.code
-        check_base = open("/Users/nikita/Desktop/project/check_base.txt", "w")
+        check_base = open("check_base.txt", "w")
         for line in checker :
                 check_base.write(line + '\n')
         check_base.close()
@@ -74,7 +74,7 @@ def adder(update, context) :
                         else:
                                 acc_list.append(added_acc)
                                 break
-        q = open("/Users/nikita/Desktop/project/acc_base.txt", "w")
+        q = open("acc_base.txt", "w")
         for line in acc_list :
                 q.write(line+'\n')
         q.close()
