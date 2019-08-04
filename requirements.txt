@@ -12,7 +12,7 @@ cryptography==2.7
 future==0.17.1
 idna==2.8
 importlib-metadata==0.18
-instagram==2.1.0
+instagram==2.1
 more-itertools==7.1.0
 multidict==4.5.2
 numpy==1.16.4
