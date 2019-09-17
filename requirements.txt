@@ -12,7 +12,6 @@ cryptography==2.7
 future==0.17.1
 idna==2.8
 importlib-metadata==0.18
-instagram==2.1
 more-itertools==7.1.0
 multidict==4.5.2
 numpy==1.16.4
@@ -20,7 +19,7 @@ packaging==19.0
 pluggy==0.12.0
 py==1.8.0
 pycparser==2.19
-pyinstagram==0.2.1
+pyinstagram==2.1
 pyparsing==2.4.0
 pyTelegramBotAPI==2.2.3
 pytest==5.0.0
